@@ -7,20 +7,28 @@ import java.util.Properties;
 
 public class ConfigReader {
     /*
-     * This method is used to load the properties from config.properties file
-     * @return it returns Properties prop object
+     * Loads properties from src/test/resources/config/config.properties and returns a Properties object.
+     * Uses a simple file close in finally block to avoid leaving the stream open.
      */
     private Properties prop;
-
-    public Properties init_prop() {
+    public Properties init_prop() {
         prop = new Properties();
+        FileInputStream ip = null;
         try {
-            FileInputStream ip = new FileInputStream(".\\src\\test\\resources\\config\\config.properties");
+            ip = new FileInputStream(".\\src\\test\\resources\\config\\config.properties");
             prop.load(ip);
         } catch (FileNotFoundException e) {
+            // Prefer logging the error so test runners can see why config failed to load.
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (ip != null) {
+                try {
+                    ip.close();
+                } catch (IOException ignore) {
+                }
+            }
         }
         return prop;
     }

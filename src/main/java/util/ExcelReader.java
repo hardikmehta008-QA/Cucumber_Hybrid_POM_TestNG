@@ -16,20 +16,25 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.util.NumberToTextConverter;
 
+// Utility to read Excel sheets (XLS/XLSX) and convert each row into a Map<header, value>.
+// Preserves column order using LinkedHashMap. Designed for small-to-medium sized test data files.
 public class ExcelReader {
 
+    // Read data by sheet name and convert to List of maps (one map per row)
     public List<Map<String, String>> getData(String excelFilePath, String sheetName)
             throws InvalidFormatException, IOException {
         Sheet sheet = getSheetByName(excelFilePath, sheetName);
         return readSheet(sheet);
     }
 
+    // Read data by sheet index (0-based)
     public List<Map<String, String>> getData(String excelFilePath, int sheetNumber)
             throws InvalidFormatException, IOException {
         Sheet sheet = getSheetByIndex(excelFilePath, sheetNumber);
         return readSheet(sheet);
     }
 
+    // Obtain sheet using WorkbookFactory which supports both XLS and XLSX formats
     private Sheet getSheetByName(String excelFilePath, String sheetName) throws IOException, InvalidFormatException {
         Sheet sheet = getWorkBook(excelFilePath).getSheet(sheetName);
         return sheet;
@@ -41,9 +46,11 @@ public class ExcelReader {
     }
 
     private Workbook getWorkBook(String excelFilePath) throws IOException, InvalidFormatException {
+        // NOTE: calling code is responsible for small files; consider using try-with-resources if workbook should be closed here.
         return WorkbookFactory.create(new File(excelFilePath));
     }
 
+    // Convert sheet rows into List<Map<header, value>>. Header row is detected by getHeaderRowNumber().
     private List<Map<String, String>> readSheet(Sheet sheet) {
         Row row;
         int totalRow = sheet.getPhysicalNumberOfRows();
@@ -51,7 +58,7 @@ public class ExcelReader {
         int headerRowNumber = getHeaderRowNumber(sheet);
         if (headerRowNumber != -1) {
             int totalColumn = sheet.getRow(headerRowNumber).getLastCellNum();
-            int setCurrentRow = 1;
+            int setCurrentRow = 1; // assumes header is at first row index; this offset may need adjustment for other layouts
             for (int currentRow = setCurrentRow; currentRow <= totalRow; currentRow++) {
                 row = getRow(sheet, sheet.getFirstRowNum() + currentRow);
                 LinkedHashMap<String, String> columnMapdata = new LinkedHashMap<String, String>();
@@ -64,6 +71,7 @@ public class ExcelReader {
         return excelRows;
     }
 
+    // Finds the first row that contains a typed cell and treats it as the header row.
     private int getHeaderRowNumber(Sheet sheet) {
         Row row;
         int totalRow = sheet.getLastRowNum();
@@ -95,6 +103,8 @@ public class ExcelReader {
         return sheet.getRow(rowNumber);
     }
 
+    // Returns a single-entry map mapping column header -> cell value (as String).
+    // Handles STRING, NUMERIC, BOOLEAN and ERROR cell types.
     private LinkedHashMap<String, String> getCellValue(Sheet sheet, Row row, int currentColumn) {
         LinkedHashMap<String, String> columnMapdata = new LinkedHashMap<String, String>();
         Cell cell;

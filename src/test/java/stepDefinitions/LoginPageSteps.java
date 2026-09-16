@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.LoginPage;
 
+// Step definitions for Login-related scenarios. Delegates actions to LoginPage page object.
 public class LoginPageSteps {
 
     private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());

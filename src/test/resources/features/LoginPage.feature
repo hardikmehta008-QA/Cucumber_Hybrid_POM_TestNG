@@ -1,10 +1,13 @@
+@Login
 Feature: Login page feature
 
+  @Smoke @Skip
   Scenario: Home page title
     Given user is on home page
     When user gets the title of the home page
     Then home page title should be "Automation Exercise"
 
+  @Smoke @Regression
   Scenario Outline: Login with correct credentials
     Given user clicks on login link
     When user is navigated to login page

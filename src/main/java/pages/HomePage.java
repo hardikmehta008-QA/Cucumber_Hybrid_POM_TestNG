@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
+// Page Object for Home page. Exposes read-only methods that return page state for assertions.
 public class HomePage {
     private WebDriver driver;
 
