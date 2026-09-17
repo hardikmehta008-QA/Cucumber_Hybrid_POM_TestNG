@@ -19,6 +19,7 @@ pipeline {
             steps {
                 // Compiles the source and test code
                 sh 'mvn clean compile'
+                bat 'echo "Hello World"'
             }
         }
 
