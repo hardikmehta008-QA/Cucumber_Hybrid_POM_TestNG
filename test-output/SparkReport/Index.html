@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Automation Exercise Application Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sep 16, 2026 07:32:17 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 17, 2026 07:31:21 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,13 +71,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sep 16, 2026 07:32:17 PM</h3>
+<h3>Sep 17, 2026 07:31:21 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sep 16, 2026 07:36:40 PM</h3>
+<h3>Sep 17, 2026 07:33:09 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Home Page Feature":258.239,"Login page feature":230.307,"Contact Us Feature":257.28
+"Login page feature":98.45,"Contact Us Feature":105.101,"Home Page Feature":101.005
 };
 </script>
 <div class="row">
@@ -177,15 +177,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@Skip</td>
-<td>0</td>
-<td>0</td>
-<td>2</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>@Login</td>
+<td>@Smoke</td>
 <td>1</td>
 <td>0</td>
 <td>1</td>
@@ -201,7 +193,15 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@Smoke</td>
+<td>@Skip</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Login</td>
 <td>1</td>
 <td>0</td>
 <td>1</td>
@@ -281,31 +281,31 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@Skip</a><a class="dropdown-item" href="#">@Login</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@Smoke</a>
+<a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@Skip</a><a class="dropdown-item" href="#">@Login</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="skip" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Home Page Feature</p>
+            <p class="name">Login page feature</p>
             <p class="text-sm">
-              <span>7:32:20 PM</span> / <span>00:04:18:239</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>7:31:24 PM</span> / <span>00:01:38:450</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Home Page Feature</h5>
-<span class='badge badge-success'>09.16.2026 7:32:20 PM</span>
-<span class='badge badge-danger'>09.16.2026 7:36:38 PM</span>
-<span class='badge badge-default'>00:04:18:239</span>
+<h5 class="test-status text-skip">Login page feature</h5>
+<span class='badge badge-success'>09.17.2026 7:31:24 PM</span>
+<span class='badge badge-danger'>09.17.2026 7:33:02 PM</span>
+<span class='badge badge-default'>00:01:38:450</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -318,7 +318,248 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify product category section count</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user clicks on login link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user is navigated to login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then verify Login to your account text is visible</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user enters valid "testauto_45@yopmail.com" and "Testauto@45"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on the login button</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log skip-bg mr-2">Skip</span>Home page title</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.user_gets_the_title_of_the_home_page()">
+                <span>When user gets the title of the home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.home_page_title_should_be(java.lang.String)">
+                <span>Then home page title should be "Automation Exercise"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Contact Us Feature</p>
+            <p class="text-sm">
+              <span>7:31:24 PM</span> / <span>00:01:45:101</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Contact Us Feature</h5>
+<span class='badge badge-success'>09.17.2026 7:31:24 PM</span>
+<span class='badge badge-danger'>09.17.2026 7:33:09 PM</span>
+<span class='badge badge-default'>00:01:45:101</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to contact us page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user fills the form from given sheetname "contactus" and rownumber 0</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on submit button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user accept the alert "Press OK to proceed!"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then it shows a successful message "Success! Your details have been submitted successfully."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user navigates to contact us page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user fills the form from given sheetname "contactus" and rownumber 1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on submit button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user accept the alert "Press OK to proceed!"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then it shows a successful message "Success! Your details have been submitted successfully."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Home Page Feature</p>
+            <p class="text-sm">
+              <span>7:31:24 PM</span> / <span>00:01:41:005</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Home Page Feature</h5>
+<span class='badge badge-success'>09.17.2026 7:31:24 PM</span>
+<span class='badge badge-danger'>09.17.2026 7:33:05 PM</span>
+<span class='badge badge-default'>00:01:41:005</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log skip-bg mr-2">Skip</span>Verify that user is navigated to home page successfully</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step skip-bg" title="stepDefinitions.HomePageSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)">
+                <span>Given user has already logged in to application</span>
+      <div><table class='markup-table table '><tr><td>email</td><td>pwd</td></tr><tr><td>testauto_45@yopmail.com</td><td>Testauto@45</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.HomePageSteps.verify_that_logged_in_as_username_is_visible()">
+                <span>Given verify that Logged in as username is visible</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.user_gets_the_title_of_the_home_page()">
+                <span>When user gets the title of the home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.home_page_title_should_be(java.lang.String)">
+                <span>Then home page title should be "Automation Exercise"</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log fail-bg mr-2">Fail</span>Verify product category section count</div>
       </div>
     </div>
         <div class="">
@@ -363,7 +604,7 @@ Build info: version: '4.45.0', revision: 'cd6a3cd cd6a3cdfca6970f62e5bc8344109d0
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Command: [null, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53974}, goog:processID: 12952, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53974/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55262}, goog:processID: 3224, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55262/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
@@ -377,247 +618,6 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
       </div>
               </div>
           </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="5"><span class="badge log skip-bg mr-2">Skip</span>Verify that user is navigated to home page successfully</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step skip-bg" title="stepDefinitions.HomePageSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)">
-                <span>Given user has already logged in to application</span>
-      <div><table class='markup-table table '><tr><td>email</td><td>pwd</td></tr><tr><td>testauto_45@yopmail.com</td><td>Testauto@45</td></tr></table>
-      </div>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinitions.HomePageSteps.verify_that_logged_in_as_username_is_visible()">
-                <span>Given verify that Logged in as username is visible</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.user_gets_the_title_of_the_home_page()">
-                <span>When user gets the title of the home page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.home_page_title_should_be(java.lang.String)">
-                <span>Then home page title should be "Automation Exercise"</span>
-      <div>Step skipped
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="skip" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Login page feature</p>
-            <p class="text-sm">
-              <span>7:32:20 PM</span> / <span>00:03:50:307</span>
-              <span class="badge skip-bg log float-right">Skip</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-skip">Login page feature</h5>
-<span class='badge badge-success'>09.16.2026 7:32:20 PM</span>
-<span class='badge badge-danger'>09.16.2026 7:36:10 PM</span>
-<span class='badge badge-default'>00:03:50:307</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="4"><span class="badge log skip-bg mr-2">Skip</span>Home page title</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.user_is_on_home_page()">
-                <span>Given user is on home page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.user_gets_the_title_of_the_home_page()">
-                <span>When user gets the title of the home page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinitions.LoginPageSteps.home_page_title_should_be(java.lang.String)">
-                <span>Then home page title should be "Automation Exercise"</span>
-      <div>Step skipped
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
-      </div>
-    </div>
-        <div class="scenario_outline collapse">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Login with correct credentials</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given user clicks on login link</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user is navigated to login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then verify Login to your account text is visible</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then user enters valid "testauto_45@yopmail.com" and "Testauto@45"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user clicks on the login button</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Contact Us Feature</p>
-            <p class="text-sm">
-              <span>7:32:20 PM</span> / <span>00:04:17:280</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">Contact Us Feature</h5>
-<span class='badge badge-success'>09.16.2026 7:32:20 PM</span>
-<span class='badge badge-danger'>09.16.2026 7:36:37 PM</span>
-<span class='badge badge-default'>00:04:17:280</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
-      </div>
-    </div>
-        <div class="scenario_outline collapse">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given user navigates to contact us page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user fills the form from given sheetname "contactus" and rownumber 0</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user clicks on submit button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user accept the alert "Press OK to proceed!"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then it shows a successful message "Success! Your details have been submitted successfully."</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="13"><span class="badge log pass-bg mr-2">Pass</span>Contact Us scenario with different set of data</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given user navigates to contact us page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When user fills the form from given sheetname "contactus" and rownumber 1</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user clicks on submit button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And user accept the alert "Press OK to proceed!"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then it shows a successful message "Success! Your details have been submitted successfully."</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
         </div>
   </div>
 </div>
@@ -643,61 +643,15 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-skip'>2</span>
-</span>
-<p class="name">@Skip</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Skip</h4>
-<span status="skip" class='badge log badge-skip'>2 skipped</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>19:32:20 PM</td>
-<td>
-<a href="#" class="linked" test-id='3' id='4'>Home page title</a>
-<div class="">
-<span class="badge badge-default">Login page feature.Home page title</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>19:32:20 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='5'>Verify that user is navigated to home page successfully</a>
-<div class="">
-<span class="badge badge-default">Home Page Feature.Verify that user is navigated to home page successfully</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
 <span class='badge log pass-bg'>1</span>
 <span class='badge log badge-skip'>1</span>
 </span>
-<p class="name">@Login</p>
+<p class="name">@Smoke</p>
 <p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@Login</h4>
+<h4>@Smoke</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 <span status="skip" class='badge log badge-skip'>1 skipped</span>
 </div>
@@ -710,23 +664,23 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>19:32:20 PM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:31:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='4'>Home page title</a>
+<a href="#" class="linked" test-id='1' id='3'>Login with correct credentials</a>
 <div class="">
-<span class="badge badge-default">Login page feature.Home page title</span>
+<span class="badge badge-default">Login page feature.Login with correct credentials</span>
 </div>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>19:32:20 PM</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>19:31:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='11'>Login with correct credentials</a>
+<a href="#" class="linked" test-id='1' id='10'>Home page title</a>
 <div class="">
-<span class="badge badge-default">Login page feature.Login with correct credentials</span>
+<span class="badge badge-default">Login page feature.Home page title</span>
 </div>
 </td>
 </tr>
@@ -758,11 +712,57 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:32:20 PM</td>
+<td>19:31:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='11'>Login with correct credentials</a>
+<a href="#" class="linked" test-id='1' id='3'>Login with correct credentials</a>
 <div class="">
 <span class="badge badge-default">Login page feature.Login with correct credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>2</span>
+</span>
+<p class="name">@Skip</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Skip</h4>
+<span status="skip" class='badge log badge-skip'>2 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>19:31:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='8'>Verify that user is navigated to home page successfully</a>
+<div class="">
+<span class="badge badge-default">Home Page Feature.Verify that user is navigated to home page successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>19:31:24 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='10'>Home page title</a>
+<div class="">
+<span class="badge badge-default">Login page feature.Home page title</span>
 </div>
 </td>
 </tr>
@@ -776,12 +776,12 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 <span class='badge log pass-bg'>1</span>
 <span class='badge log badge-skip'>1</span>
 </span>
-<p class="name">@Smoke</p>
+<p class="name">@Login</p>
 <p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@Smoke</h4>
+<h4>@Login</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 <span status="skip" class='badge log badge-skip'>1 skipped</span>
 </div>
@@ -794,23 +794,23 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="skip">
-<td><span class="badge log skip-bg">Skip</span></td>
-<td>19:32:20 PM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>19:31:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='4'>Home page title</a>
+<a href="#" class="linked" test-id='1' id='3'>Login with correct credentials</a>
 <div class="">
-<span class="badge badge-default">Login page feature.Home page title</span>
+<span class="badge badge-default">Login page feature.Login with correct credentials</span>
 </div>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>19:32:20 PM</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>19:31:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='3' id='11'>Login with correct credentials</a>
+<a href="#" class="linked" test-id='1' id='10'>Home page title</a>
 <div class="">
-<span class="badge badge-default">Login page feature.Login with correct credentials</span>
+<span class="badge badge-default">Login page feature.Home page title</span>
 </div>
 </td>
 </tr>
@@ -839,42 +839,6 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>19:36:04 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='50'>Then verify that count of product categories is 3</a>
-<div class="">
-<span class="badge badge-default">Home Page Feature.Verify product category section count.Then verify that count of product categories is 3</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
 <p class="name">org.openqa.selenium.NoSuchSessionException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
@@ -894,11 +858,47 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:36:37 PM</td>
+<td>19:33:05 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='61'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='7' id='53'>AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</a>
 <div class="">
 <span class="badge badge-default">Home Page Feature.Verify product category section count.AppHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:32:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='50'>Then verify that count of product categories is 3</a>
+<div class="">
+<span class="badge badge-default">Home Page Feature.Verify product category section count.Then verify that count of product categories is 3</span>
 </div>
 </td>
 </tr>
