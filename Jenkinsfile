@@ -36,7 +36,7 @@ pipeline {
     post {
         always {
             // Generates advanced Cucumber HTML reports after the test execution
-            cucumber buildResult: 'FAILURE',
+            cucumber buildStatus: 'FAILURE',
                      failedFeaturesNumber: 0,
                      failedScenariosNumber: 0,
                      failedStepsNumber: 0,
